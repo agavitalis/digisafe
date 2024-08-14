@@ -1,0 +1,48 @@
+Deployment Tests:
+
+Should deploy the contract with correct initial parameters.
+Functionality Tests:
+
+createSaving:
+
+Should create a new saving with the correct parameters.
+Should revert if the saving name is invalid.
+Should revert if the lock period is less than the minimum.
+addAsset:
+
+Should add assets to the saving correctly.
+Should revert if the saving is completed.
+Should revert if the asset amount is zero.
+topUpAsset:
+
+Should top up assets in the saving correctly.
+Should revert if the saving is completed.
+Should revert if the asset amount is zero.
+extendLockPeriod:
+
+Should extend the lock period of the saving correctly.
+Should revert if the saving is completed.
+Should revert if the new lock period is less than the minimum.
+withdrawAsset:
+
+Should withdraw assets from the saving correctly.
+Should revert if the saving is not completed.
+Should revert if the lock period is still valid.
+Should revert if the withdrawal amount exceeds the locked amount.
+withdrawAllAsset:
+
+Should withdraw all assets from the saving correctly.
+Should revert if the saving is not completed.
+Should revert if the lock period is still valid.
+State Management Tests:
+
+Ensure savings mapping is updated correctly after creating a saving or completing it.
+Ensure assetsLocked mapping is updated correctly after adding or withdrawing assets.
+Event Tests:
+
+Ensure proper events are emitted when creating a saving, completing it, adding assets, topping up assets, and withdrawing assets.
+Edge Case Tests:
+
+Test with multiple savings with different scenarios (e.g., different lock periods).
+Test withdrawing assets when the withdrawal amount is equal to the locked amount.
+Test withdrawing all assets when the saving has multiple assets.

@@ -1,0 +1,42 @@
+Functionality Tests:
+
+setMaximumAssetPerSavings:
+
+Should set the maximum asset per savings correctly when called by the owner.
+Should revert if the amount is zero.
+setMinimumAssetLockPeriod:
+
+Should set the minimum asset lock period correctly when called by the owner.
+Should revert if the duration is zero.
+setFeeCollector:
+
+Should set the fee collector address correctly when called by the owner.
+Should revert if the fee collector address is zero.
+addAsset:
+
+Should add a new asset correctly when called by the owner.
+Should revert if the asset address is zero.
+updateAsset:
+
+Should update an existing asset correctly when called by the owner.
+Should revert if the asset ID is zero.
+Should revert if the asset address is zero.
+getAssetDetail:
+
+Should return asset details correctly.
+Should revert if the asset ID is zero.
+Should revert if the asset is not active.
+Should revert if the asset price is zero or negative.
+Access Control Tests:
+
+Should revert if a non-owner tries to call setMaximumAssetPerSavings.
+Should revert if a non-owner tries to call setMinimumAssetLockPeriod.
+Should revert if a non-owner tries to call setFeeCollector.
+Should revert if a non-owner tries to call addAsset.
+Should revert if a non-owner tries to call updateAsset.
+Internal Function Tests:
+
+Test _isValidAddress reverts on zero address.
+Test _isApprovedAsset reverts on false status.
+Test _isNotZero reverts on zero value.
+Test _getAssetUsdPrice returns correct price and reverts on zero address.

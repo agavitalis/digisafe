@@ -1,0 +1,27 @@
+Deployment Tests:
+
+Should deploy the contract with correct initial parameters.
+Functionality Tests:
+
+createSavingsAccount:
+
+Should create a savings account for the caller.
+Should revert if the caller already has a savings account.
+
+
+setNewSavingAccountOwner:
+
+Should transfer ownership of the savings account to a new address.
+Should revert if the caller doesn't have a savings account.
+Should revert if the new owner already has a savings account.
+State Management Tests:
+
+Ensure userSavingsContracts mapping is updated correctly after creating a savings account or transferring ownership.
+Event Tests:
+
+Ensure proper events are emitted when creating a savings account and transferring ownership.
+Edge Case Tests:
+
+Test with multiple users creating savings accounts.
+Test transferring ownership to an address that already has a savings account.
+Test transferring ownership from an address that doesn't have a savings account.

@@ -1,0 +1,9 @@
+-- Add ability for users to borrow their money out
+-- Add ability to process savings lets say a user sends money directly and its a supported token
+-- It should take it and save for the user 
+-- Make some changes to our savings charge that once it exceeds a certain amount we will take the cap and we only take in usdt
+-- Add a feature where the user can migrate to new contract and no issue will occure
+-- Add situation where we can set a general pause for all payouts 
+-- Add a feature where we can blacklist a savings account
+-- migration function on the savings
+-- vested savings - a type of savings where the users can withdraw a certain percent at intervals

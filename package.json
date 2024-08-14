@@ -1,0 +1,37 @@
+{
+  "name": "v1-digitsave-contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "test-factory": "npx hardhat test test/digit-factory.ts",
+    "test-storage": "npx hardhat test test/digit-storage.ts",
+    "test-saving": "npx hardhat test test/digit-save.ts",
+    "node-run": "npx hardhat node",
+    "testnet-base-storage": "npx hardhat run scripts/storage.ts --network baseTestnet",
+    "testnet-base-factory": "npx hardhat run scripts/factory.ts --network baseTestnet",
+    "testnet-base-deploy-asset": "npx hardhat run scripts/deploy-asset.ts --network baseTestnet",
+    "testnet-base-add-asset": "npx hardhat run scripts/sepolia/add-asset.ts --network baseTestnet",
+
+
+    "testnet-base-verify-factory": "npx hardhat verify --network baseTestnet --constructor-args contract-args/factory.ts  0xc6Bb6bD945Af880fab19B5fbaC0D8e42a8942E12",
+    "testnet-base-verify-storage": "npx hardhat verify --network baseTestnet --constructor-args contract-args/storage.ts  0xFD0D395CA4E8b22f657F55e635F4D27D987BeFC0",
+    "testnet-base-verify-saving": "npx hardhat verify --network baseTestnet --constructor-args contract-args/saving.ts  0x00C8F042163F224d360D38875f81BD46beab6284",
+    "testnet-base-verify-asset": "npx hardhat verify --contract contracts/dependencies/USDC.sol:USDC --network baseTestnet  --constructor-args contract-args/asset.ts 0xc6ceA2518610e6C0D9bF199F7B4692408649d10E"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.8",
+    "@types/fs-extra": "^11.0.4",
+    "hardhat": "^2.22.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "fs-extra": "^11.2.0"
+  }
+}
